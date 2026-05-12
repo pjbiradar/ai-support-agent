@@ -26,6 +26,7 @@ function App() {
       )
 
       const data = await response.json()
+      // console.log(data);
       const aiText = data.candidates[0].content.parts[0].text
 
       setMessages(prev => [...prev, { role: 'AI', text: aiText }])
